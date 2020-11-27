@@ -3,8 +3,6 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import swal from "sweetalert";
-
-
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
     .min(2, "username is Too Short!")

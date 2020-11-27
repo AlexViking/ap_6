@@ -4,7 +4,10 @@
   "description": "backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "node index.js",
+    "app": "npm start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run app\""
   },
   "author": "",
   "license": "ISC",

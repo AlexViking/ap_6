@@ -6,13 +6,11 @@ import Register from "./components/register";
 import Login from "./components/login";
 import Dashboard from "./components/dashboard";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Redirect } from 'react-router';
 
-//Check if user is logged in
 const isLoggedIn = () => {
   return localStorage.getItem('TOKEN_KEY') != null;
 };
-
-//Secured route
 const SecuredRoute = ({ component: Component, ...rest }) => (
     
   <Route
@@ -27,18 +25,18 @@ const SecuredRoute = ({ component: Component, ...rest }) => (
     }
   />
 );
-
-
-//
 export default class App extends Component {
+  
   render() {
+    // const {pathname} = this.props.location;
     return (
       <Router>
         <Switch>
-        <div>
+          <div>
           {isLoggedIn() && (
               <>
-                <Header /> <Sidebar />
+                <Header /> 
+                <Sidebar />
               </>
             )}
             <Route path="/register" component={Register} />
