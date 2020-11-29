@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/header";
-//import Sidebar from "./components/sidebar";
+import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
 import Register from "./components/register";
 import Login from "./components/login";
