@@ -37,14 +37,13 @@ export default class App extends Component {
           <div>
             {isLoggedIn() && (
               <>
-                <Header /> 
-                {/* <Sidebar /> */}
+                <Header /><Sidebar />
               </>
             )}
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <SecuredRoute path='/dashboard' component={Dashboard}/>
-            {/* {isLoggedIn() && <Footer />} */}
+            {isLoggedIn() && <Footer />}
           </div>
         </Switch>
       </Router>
