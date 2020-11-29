@@ -8,7 +8,7 @@ class Footer extends Component {
           <b>V</b> 0.0.6
         </div>
         <strong>
-          Copyright © 2020 <a href="https://github.com/AlexViking/ap_6">ap</a>.
+          Copyright © 2020 <a href="https://github.com/AlexViking/ap_6">Point of Sale for MalwareBytes</a>.
         </strong>{" "}
         All rights reserved.
       </footer>
