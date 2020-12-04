@@ -81,7 +81,7 @@ export default (props) => {
                             <tr key={index}>
                               <td>
                                 <img
-                                  class="img-fluid img-rounded"
+                                  className="img-fluid img-rounded"
                                   width={200}
                                   src={
                                     process.env.REACT_APP_PRODUCT_IMAGE_PATH +

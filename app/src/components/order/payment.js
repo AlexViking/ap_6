@@ -76,9 +76,9 @@ export default (props) => {
         <div className="row">
           <div className="col">
             {isMustChanged(values) && (
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">
+              <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                  <span className="input-group-text" id="basic-addon1">
                     Change
                   </span>
                 </div>
@@ -92,9 +92,9 @@ export default (props) => {
                 />
               </div>
             )}
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
                   Given
                 </span>
               </div>

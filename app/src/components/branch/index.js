@@ -47,7 +47,7 @@ export default (props) => {
             {
                 Header: "Front Image",
                 accessor: "frontimage",
-                Cell: ({ cell: { value } }) => <img class="img-fluid img-rounded"
+                Cell: ({ cell: { value } }) => <img className="img-fluid img-rounded"
                     width={200} src={process.env.REACT_APP_BRANCH_FRONT_IMAGE_PATH + '/' + value} />
             },
             {
@@ -73,12 +73,12 @@ export default (props) => {
                 Cell: ({ cell: { value } }) => {
                     // alert(id)
                     return <><Link to={"/branch/update/" + value} type="button"
-                        class="btn btn-primary" style={{ 'margin-right': '5px' }}
+                        className="btn btn-primary" style={{ 'margin-right': '5px' }}
                         onClick={() => dispatch(branchActions.clearState())}
                     >
                         Edit
                         </Link>
-                        <Link type="button" class="btn btn-danger" onClick={() => confirmDelete(value)}>
+                        <Link type="button" className="btn btn-danger" onClick={() => confirmDelete(value)}>
                             Delete
                     </Link></>
                 }
@@ -90,7 +90,7 @@ export default (props) => {
         if (branchReducer.result) {
             return <Table columns={columns} data={branchReducer.result} />
         } else {
-            return <img class="img-fluid img-rounded"
+            return <img className="img-fluid img-rounded"
                 src={loading} />
         }
     }

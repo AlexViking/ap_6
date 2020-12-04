@@ -36,8 +36,8 @@ export default (props) => {
     }) => {
         return (
             <form role="form" onSubmit={handleSubmit}>
-                <div class="card-body">
-                    <div class="row">
+                <div className="card-body">
+                    <div className="row">
                         <div className="form-group col-md-6 input-group has-feedback">
                             <input
                                 type="text"
@@ -52,19 +52,19 @@ export default (props) => {
                                         : "form-control"
                                 }
                             />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-user"></span>
+                            <div className="input-group-append">
+                                <div className="input-group-text">
+                                    <span className="fas fa-user"></span>
                                 </div>
                             </div>
                             {errors.name && touched.name ? (
-                                <small id="passwordHelp" class="text-danger">
+                                <small id="passwordHelp" className="text-danger">
                                     {errors.name}
                                 </small>
                             ) : null}
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="form-group col-md-8 input-group has-feedback">
                             <textarea
                                 name="address"
@@ -78,13 +78,13 @@ export default (props) => {
                                         : "form-control"
                                 }
                             ></textarea>
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-building"></span>
+                            <div className="input-group-append">
+                                <div className="input-group-text">
+                                    <span className="fas fa-building"></span>
                                 </div>
                             </div>
                             {errors.address && touched.address ? (
-                                <small id="passwordHelp" class="text-danger">
+                                <small id="passwordHelp" className="text-danger">
                                     {errors.address}
                                 </small>
                             ) : null}
@@ -105,12 +105,12 @@ export default (props) => {
                             }
                         />
                         {errors.tel && touched.tel ? (
-                            <small id="passwordHelp" class="text-danger">
+                            <small id="passwordHelp" className="text-danger">
                                 {errors.tel}
                             </small>
                         ) : null}
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="form-group col-md-6 input-group has-feedback">
                             <input
                                 type="email"
@@ -125,19 +125,19 @@ export default (props) => {
                                         : "form-control"
                                 }
                             />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                            <div className="input-group-append">
+                                <div className="input-group-text">
+                                    <span className="fas fa-envelope"></span>
                                 </div>
                             </div>
                             {errors.email && touched.email ? (
-                                <small id="passwordHelp" class="text-danger">
+                                <small id="passwordHelp" className="text-danger">
                                     {errors.email}
                                 </small>
                             ) : null}
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="form-group col-md-6 input-group has-feedback">
                             <input
                                 type="text"
@@ -152,25 +152,25 @@ export default (props) => {
                                         : "form-control"
                                 }
                             />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-user"></span>
+                            <div className="input-group-append">
+                                <div className="input-group-text">
+                                    <span className="fas fa-user"></span>
                                 </div>
                             </div>
                             {errors.vat && touched.vat ? (
-                                <small id="passwordHelp" class="text-danger">
+                                <small id="passwordHelp" className="text-danger">
                                     {errors.vat}
                                 </small>
                             ) : null}
                         </div>
 
                     </div>
-                    <div class="row">
-                        <div class="offset-md-1 col-4">
+                    <div className="row">
+                        <div className="offset-md-1 col-4">
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                class="btn btn-primary btn-block"
+                                className="btn btn-primary btn-block"
                             >
                                 Add
                              </button>
@@ -196,8 +196,8 @@ export default (props) => {
                 {/* /.container-fluid */}
             </div>
             <div className="content">
-                <div class="card card-success">
-                    <div class="card-header">
+                <div className="card card-success">
+                    <div className="card-header">
 
                     </div>
 

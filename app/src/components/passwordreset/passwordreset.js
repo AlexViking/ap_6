@@ -44,7 +44,7 @@ export default (props) => {
               placeholder="Enter new password"
             />
             {errors.password && touched.password ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.password}
               </small>
             ) : null}
@@ -66,19 +66,19 @@ export default (props) => {
               placeholder="Enter password again"
             />
             {errors.confirm_password && touched.confirm_password ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.confirm_password}
               </small>
             ) : null}
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12">
+        <div className="row">
+          <div className="col-12">
             <button
               type="submit"
               disabled={isSubmitting}
-              class="btn btn-primary btn-block"
+              className="btn btn-primary btn-block"
             >
               Save new password
             </button>

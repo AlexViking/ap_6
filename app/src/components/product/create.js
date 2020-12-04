@@ -22,7 +22,7 @@ export default (props) => {
             ? values.file_obj
             : "https://via.placeholder.com/200"
         }
-        class="img-fluid"
+        className="img-fluid"
         width={200}
       />
     );
@@ -38,12 +38,12 @@ export default (props) => {
   }) => {
     return (
       <form role="form" onSubmit={handleSubmit}>
-        <div class="card-body">
-          <div class="form-group ">{showPreviewImage(values)}</div>
-          <div class="form-group ">
-            <div class="input-group col-5">
-              <div class="custom-file">
-                <label class="custom-file-label" for="exampleInputFile">
+        <div className="card-body">
+          <div className="form-group ">{showPreviewImage(values)}</div>
+          <div className="form-group ">
+            <div className="input-group col-5">
+              <div className="custom-file">
+                <label className="custom-file-label" for="exampleInputFile">
                   Choose Front Image
                 </label>
                 <input
@@ -99,7 +99,7 @@ export default (props) => {
               }
             />
             {errors.price && touched.price ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.price}
               </small>
             ) : null}
@@ -119,18 +119,18 @@ export default (props) => {
               }
             />
             {errors.stock && touched.stock ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.stock}
               </small>
             ) : null}
           </div>
 
-          <div class="row">
-            <div class="offset-md-4 col-4">
+          <div className="row">
+            <div className="offset-md-4 col-4">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                class="btn btn-primary btn-block"
+                className="btn btn-primary btn-block"
               >
                 Add
               </button>
@@ -155,8 +155,8 @@ export default (props) => {
         {/* /.container-fluid */}
       </div>
       <div className="content">
-        <div class="card card-primary">
-          <div class="card-header"></div>
+        <div className="card card-primary">
+          <div className="card-header"></div>
 
           <Formik
             initialValues={{

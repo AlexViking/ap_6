@@ -70,13 +70,13 @@ export default (props) => {
                 Cell: ({ cell: { value } }) => {
                     // alert(id)
                     return <><Link to={"/posmachine/update/" + value} type="button"
-                        class="btn btn-primary" style={{ 'margin-right': '5px' }}
+                        className="btn btn-primary" style={{ 'margin-right': '5px' }}
                         onClick={() => dispatch(posmachineActions.clearState())}
-                    ><i class="fa fa-edit"></i>{' '}
+                    ><i className="fa fa-edit"></i>{' '}
                         Edit
                         </Link>
-                        <Link type="button" class="btn btn-danger" onClick={() => confirmDelete(value)}>
-                            <i class="fa fa-trash"></i>{' '}  Delete
+                        <Link type="button" className="btn btn-danger" onClick={() => confirmDelete(value)}>
+                            <i className="fa fa-trash"></i>{' '}  Delete
                     </Link></>
                 }
             },
@@ -91,7 +91,7 @@ export default (props) => {
                 skipPageReset={skipPageReset}
             />
         } else {
-            return <img class="img-fluid img-rounded"
+            return <img className="img-fluid img-rounded"
                 src={loading} width="30%" />
         }
     }

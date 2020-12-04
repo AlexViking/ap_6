@@ -73,7 +73,7 @@ class Register extends Component {
             }
           />
           {errors.fullname && touched.fullname ? (
-            <small id="passwordHelp" class="text-danger">
+            <small id="passwordHelp" className="text-danger">
               {errors.username}
             </small>
           ) : null}
@@ -92,7 +92,7 @@ class Register extends Component {
             placeholder="Email"
           />
           {errors.email && touched.email ? (
-            <small id="passwordHelp" class="text-danger">
+            <small id="passwordHelp" className="text-danger">
               {errors.email}
             </small>
           ) : null}
@@ -112,7 +112,7 @@ class Register extends Component {
             }
           />
           {errors.password && touched.password ? (
-            <small id="passwordHelp" class="text-danger">
+            <small id="passwordHelp" className="text-danger">
               {errors.password}
             </small>
           ) : null}
@@ -130,7 +130,7 @@ class Register extends Component {
             placeholder="Confirm Password"
           />
           {errors.confirm_password && touched.confirm_password ? (
-            <small id="passwordHelp" class="text-danger">
+            <small id="passwordHelp" className="text-danger">
               {errors.confirm_password}
             </small>
           ) : null}

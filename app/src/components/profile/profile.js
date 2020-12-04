@@ -77,7 +77,7 @@ class Profile extends Component {
 
   showPreviewImage = values => {
     return (
-      <div class="text-center">
+      <div className="text-center">
         <img
           id="avatars"
           src={
@@ -85,7 +85,7 @@ class Profile extends Component {
               ? values.file_obj
               : process.env.REACT_APP_BACKEND_URL + "/images/user.png"
           }
-          class="profile-user-img img-fluid img-circle"
+          className="profile-user-img img-fluid img-circle"
           width={100}
         />
       </div>
@@ -184,7 +184,7 @@ class Profile extends Component {
               placeholder="Enter email"
             />
             {errors.email && touched.email ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.email}
               </small>
             ) : null}
@@ -217,7 +217,7 @@ class Profile extends Component {
               placeholder="Enter First Name"
             />
             {errors.first_name && touched.first_name ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.first_name}
               </small>
             ) : null}
@@ -237,7 +237,7 @@ class Profile extends Component {
               placeholder="Enter Last Name"
             />
             {errors.last_name && touched.last_name ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.last_name}
               </small>
             ) : null}
@@ -257,7 +257,7 @@ class Profile extends Component {
               placeholder="Enter phone number"
             />
             {errors.phone && touched.phone ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.phone}
               </small>
             ) : null}
@@ -276,7 +276,7 @@ class Profile extends Component {
               placeholder="Address"
             />
             {errors.address && touched.address ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.address}
               </small>
             ) : null}

@@ -69,7 +69,7 @@ class Passwordforgot extends Component {
               placeholder="Enter email"
             />
             {errors.email && touched.email ? (
-              <small id="passwordHelp" class="text-danger">
+              <small id="passwordHelp" className="text-danger">
                 {errors.email}
               </small>
             ) : null}
@@ -91,12 +91,12 @@ class Passwordforgot extends Component {
           {errors.recaptcha && touched.recaptcha && <p>{errors.recaptcha}</p>}
         </div>
 
-        <div class="row">
-          <div class="col-12">
+        <div className="row">
+          <div className="col-12">
             <button
               type="submit"
               disable={isSubmitting}
-              class="btn btn-primary btn-block"
+              className="btn btn-primary btn-block"
             >
               Request new password
             </button>

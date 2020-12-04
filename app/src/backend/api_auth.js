@@ -15,7 +15,8 @@ router.post("/login", async (req, res) => {
   let doc = await Users.findOne({ username: req.body.username });
   if (doc) {
     if (bcrypt.compareSync(req.body.password, doc.password)) {
-      if (doc.status != "not_activated") {
+      //if (doc.status != "not_activated") /* #TODO */
+      if (doc.status === "not_activated") {
         const payload = {
           id: doc._id,
           level: doc.level,

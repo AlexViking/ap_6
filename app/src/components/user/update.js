@@ -48,13 +48,13 @@ export default (props) => {
                                 : "form-control"
                         }
                     />
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-user"></span>
+                    <div className="input-group-append">
+                        <div className="input-group-text">
+                            <span className="fas fa-user"></span>
                         </div>
                     </div>
                     {errors.alias && touched.alias ? (
-                        <small id="passwordHelp" class="text-danger">
+                        <small id="passwordHelp" className="text-danger">
                             {errors.alias}
                         </small>
                     ) : null}
@@ -73,23 +73,23 @@ export default (props) => {
                                 : "form-control"
                         }
                     />
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-user"></span>
+                    <div className="input-group-append">
+                        <div className="input-group-text">
+                            <span className="fas fa-user"></span>
                         </div>
                     </div>
                     {errors.serial_number && touched.serial_number ? (
-                        <small id="passwordHelp" class="text-danger">
+                        <small id="passwordHelp" className="text-danger">
                             {errors.serial_number}
                         </small>
                     ) : null}
                 </div>
-                <div class="row">
-                    <div class="offset-md-8 col-4">
+                <div className="row">
+                    <div className="offset-md-8 col-4">
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            class="btn btn-primary btn-block"
+                            className="btn btn-primary btn-block"
                         >
                             Add
             </button>
@@ -100,7 +100,7 @@ export default (props) => {
     };
 
     return (
-        <div class="login-page">
+        <div className="login-page">
             <div className="register-box">
                 <div className="card">
                     <div className="card-body register-card-body">

@@ -236,34 +236,34 @@ export default function Table({ columns, data, parent_action, updateMyData, skip
     return (
         <Styles>
             <div className="form-group input-group">
-                <button class="btn btnexport mr-1"
+                <button className="btn btnexport mr-1"
                     onClick={() => {
                         exportData("csv", true);
                     }}
-                ><i class="fa fa-file-csv"></i>{' '}
+                ><i className="fa fa-file-csv"></i>{' '}
                   Export  as CSV
       </button>{' '}
-                <button class="btn btnexport mr-1"
+                <button className="btn btnexport mr-1"
                     onClick={() => {
                         exportData("xlsx", true);
                     }}
-                ><i class="fa fa-file-excel"></i>{' '}
+                ><i className="fa fa-file-excel"></i>{' '}
                 Export  as xlsx
       </button>{' '}
-                <button class="btn btnexport mr-1"
+                <button className="btn btnexport mr-1"
                     onClick={() => {
                         exportData("pdf", true);
                     }}
-                ><i class="fa fa-file-pdf"></i>
+                ><i className="fa fa-file-pdf"></i>
                   Export as PDF
       </button>
 
                 {(Object.keys(selectedRowIds).length != 0) ?
-                    <button class="btn btn-danger"
+                    <button className="btn btn-danger"
                         onClick={() => {
                             BulkDelete(selectedFlatRows, parent_action);
                         }}
-                    ><i class="fa fa-trash"></i>
+                    ><i className="fa fa-trash"></i>
                   Delete {Object.keys(selectedRowIds).length} row
       </button> : ''}
             </div>
@@ -334,16 +334,16 @@ export default function Table({ columns, data, parent_action, updateMyData, skip
                 <div className="form-row">
                     <div className="form-group input-group col-md-2">
                         <ul className="pagination">
-                            <li class={!canPreviousPage ? "page-item disabled" : "page-item "} >
+                            <li className={!canPreviousPage ? "page-item disabled" : "page-item "} >
                                 <a className="page-link" onClick={() => gotoPage(0)} >{'<<'}</a>
                             </li>
-                            <li class={!canPreviousPage ? "page-item disabled" : "page-item "}>
+                            <li className={!canPreviousPage ? "page-item disabled" : "page-item "}>
                                 <a className="page-link" onClick={() => previousPage()} >{'<'}</a>
                             </li>
-                            <li class={!canNextPage ? "page-item disabled" : "page-item "}>
+                            <li className={!canNextPage ? "page-item disabled" : "page-item "}>
                                 <a className="page-link" onClick={() => nextPage()} >{'>'}</a>
                             </li>
-                            <li class={!canNextPage ? "page-item disabled" : "page-item "}>
+                            <li className={!canNextPage ? "page-item disabled" : "page-item "}>
                                 <a className="page-link" onClick={() => gotoPage(pageCount - 1)} >{'>>'}</a>
                             </li>
                         </ul>

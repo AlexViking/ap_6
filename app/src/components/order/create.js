@@ -31,10 +31,10 @@ export default (props) => {
           <td>
             <Link
               type="button"
-              class="btn btn-danger"
+              className="btn btn-danger"
               onClick={() => dispatch(shopActions.removeOrder(item))}
             >
-              <i class="fa fa-trash"></i>
+              <i className="fa fa-trash"></i>
             </Link>
           </td>
         </tr>
@@ -49,8 +49,8 @@ export default (props) => {
     return (
       <>
         <div className="row">
-          <table class="table table-hover shopping-cart-wrap">
-            <thead class="text-muted">
+          <table className="table table-hover shopping-cart-wrap">
+            <thead className="text-muted">
               <tr>
                 <th scope="col">Tax</th>
                 <th scope="col" width="120">
@@ -87,17 +87,17 @@ export default (props) => {
           {shopReducer.mTotalPrice > 0 && !shopReducer.mIsPaymentMade && (
             <Link
               type="button"
-              class="btn btn-success btn-block"
+              className="btn btn-success btn-block"
               onClick={() => dispatch(shopActions.togglePaymentState())}
             >
-              <i class="fa fa-cart-plus"></i> Payment
+              <i className="fa fa-cart-plus"></i> Payment
             </Link>
           )}
         </div>
         <div className="row">
           {shopReducer.mOrderLines.length > 0 ? (
-            <table class="table table-hover">
-              <thead class="text-muted">
+            <table className="table table-hover">
+              <thead className="text-muted">
                 <tr>
                   <th scope="col">Item</th>
                   <th scope="col" width="120">
@@ -106,7 +106,7 @@ export default (props) => {
                   <th scope="col" width="120">
                     Price
                   </th>
-                  <th scope="col" class="text-right"></th>
+                  <th scope="col" className="text-right"></th>
                 </tr>
               </thead>
               <tbody>{renderOrder()}</tbody>
@@ -128,8 +128,8 @@ export default (props) => {
             result.map((item, index) => {
               return (
                 <>
-                  {index % 3 === 0 && <div class="w-100 d-lg-none mt-4"></div>}
-                  <div class="col-md-6 col-lg-4 col-xl-3 py-2">
+                  {index % 3 === 0 && <div className="w-100 d-lg-none mt-4"></div>}
+                  <div className="col-md-6 col-lg-4 col-xl-3 py-2">
                     <div className="card h-100">
                       <img
                         className="card-img-top img-fluid"
@@ -164,10 +164,10 @@ export default (props) => {
                         </p>
                         <Link
                           type="button"
-                          class="btn btn-primary"
+                          className="btn btn-primary"
                           onClick={() => dispatch(shopActions.addOrder(item))}
                         >
-                          <i class="fa fa-cart-plus"></i> Add to Cart
+                          <i className="fa fa-cart-plus"></i> Add to Cart
                         </Link>
                       </div>
                     </div>

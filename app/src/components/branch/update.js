@@ -38,7 +38,7 @@ export default (props) => {
                         ? values.file_obj
                         : process.env.REACT_APP_BRANCH_FRONT_IMAGE_PATH + '/' + values.frontimage
                 }
-                class="img-fluid"
+                className="img-fluid"
                 width={300}
             />
         );
@@ -48,7 +48,7 @@ export default (props) => {
 
             if (branchReducer.result) {
                 return (
-                    <div class="form-group ">
+                    <div className="form-group ">
                         <Select
                             name="pos_machines"
                             defaultValue={branchReducer.result
@@ -84,7 +84,7 @@ export default (props) => {
     }) => {
         return (
             <form role="form" onSubmit={handleSubmit}>
-                <div class="card-body">
+                <div className="card-body">
                     <input
                         type="hidden"
                         name="_id"
@@ -105,13 +105,13 @@ export default (props) => {
                                     : "form-control"
                             }
                         />
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-building"></span>
+                        <div className="input-group-append">
+                            <div className="input-group-text">
+                                <span className="fas fa-building"></span>
                             </div>
                         </div>
                         {errors.alias && touched.alias ? (
-                            <small id="passwordHelp" class="text-danger">
+                            <small id="passwordHelp" className="text-danger">
                                 {errors.name}
                             </small>
                         ) : null}
@@ -129,13 +129,13 @@ export default (props) => {
                                     : "form-control"
                             }
                         ></textarea>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-building"></span>
+                        <div className="input-group-append">
+                            <div className="input-group-text">
+                                <span className="fas fa-building"></span>
                             </div>
                         </div>
                         {errors.serial_number && touched.serial_number ? (
-                            <small id="passwordHelp" class="text-danger">
+                            <small id="passwordHelp" className="text-danger">
                                 {errors.address}
                             </small>
                         ) : null}
@@ -154,26 +154,26 @@ export default (props) => {
                                     : "form-control"
                             }
                         />
-                        <div class="input-group-append col-3">
-                            <div class="input-group-text">
-                                <span class="fas fa-phone"></span>
+                        <div className="input-group-append col-3">
+                            <div className="input-group-text">
+                                <span className="fas fa-phone"></span>
                             </div>
                         </div>
                         {errors.tel && touched.tel ? (
-                            <small id="passwordHelp" class="text-danger">
+                            <small id="passwordHelp" className="text-danger">
                                 {errors.tel}
                             </small>
                         ) : null}
                     </div>
                     {renderSelectwithSelected()}
-                    <div class="form-group ">
+                    <div className="form-group ">
                         {showPreviewImage(values)}
                     </div>
 
-                    <div class="form-group ">
+                    <div className="form-group ">
 
-                        <div class="input-group col-5">
-                            <div class="custom-file">
+                        <div className="input-group col-5">
+                            <div className="custom-file">
                                 <input type="file"
                                     onChange={e => {
                                         e.preventDefault();
@@ -189,18 +189,18 @@ export default (props) => {
                                             : "form-control"
                                     }
                                     accept="image/*" id="exampleInputFile" />
-                                <label class="custom-file-label" for="exampleInputFile">Choose Front Image</label>
+                                <label className="custom-file-label" for="exampleInputFile">Choose Front Image</label>
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="offset-md-4 col-4">
+                    <div className="row">
+                        <div className="offset-md-4 col-4">
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                class="btn btn-primary btn-block"
+                                className="btn btn-primary btn-block"
                             >
                                 Add
                              </button>
@@ -226,8 +226,8 @@ export default (props) => {
                 {/* /.container-fluid */}
             </div>
             <div className="content">
-                <div class="card card-primary">
-                    <div class="card-header">
+                <div className="card card-primary">
+                    <div className="card-header">
 
                     </div>
 
