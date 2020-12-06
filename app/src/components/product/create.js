@@ -43,9 +43,9 @@ export default (props) => {
           <div className="form-group ">
             <div className="input-group col-5">
               <div className="custom-file">
-                <label className="custom-file-label" for="exampleInputFile">
+                {/* <label className="custom-file-label" for="exampleInputFile">
                   Choose Front Image
-                </label>
+                </label> */}
                 <input
                   type="file"
                   onChange={(e) => {
