@@ -65,14 +65,23 @@ const App = (props) => {
           <SecuredRoute path="/dashboard" component={Dashboard} />
           <SecuredRoute path="/profile" component={Profile} />
           <SecuredRoute exact path="/posmachine/" component={PosMachineIndex} />
-          <SecuredRoute path="/posmachine/create" component={PosMachineCreate} />
-          <SecuredRoute path="/posmachine/update/:id" component={PosMachineUpdate} />
+          <SecuredRoute
+            path="/posmachine/create"
+            component={PosMachineCreate}
+          />
+          <SecuredRoute
+            path="/posmachine/update/:id"
+            component={PosMachineUpdate}
+          />
           <SecuredRoute exact path="/branch/" component={BranchIndex} />
           <SecuredRoute path="/branch/create" component={BranchCreate} />
           <SecuredRoute path="/branch/update/:id" component={BranchUpdate} />
           <SecuredRoute exact path="/supplier/" component={SupplierIndex} />
           <SecuredRoute path="/supplier/create" component={SupplierCreate} />
-          <SecuredRoute path="/supplier/update/:id" component={SupplierUpdate} />
+          <SecuredRoute
+            path="/supplier/update/:id"
+            component={SupplierUpdate}
+          />
           <SecuredRoute exact path="/product/" component={ProductIndex} />
           <SecuredRoute exact path="/order/create" component={CreateOrder} />
           <SecuredRoute path="/product/create" component={ProductCreate} />

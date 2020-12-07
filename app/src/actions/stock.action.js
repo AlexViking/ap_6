@@ -94,7 +94,7 @@ const doGetProducts = async (dispatch) => {
     let result = await httpClient.get(
       process.env.REACT_APP_API_URL + server.PRODUCT_URL
     );
-    // console.log(result);
+    //console.log(result);
     dispatch(setStateProductToSuccess(result.data.data));
   } catch (err) {
     // alert(JSON.stringify(err));

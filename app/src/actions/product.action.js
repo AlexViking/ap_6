@@ -63,7 +63,7 @@ export const getDropdownPOS = () => {
         }
     };
 };
-export const getSingleBranch = (id) => {
+export const getSingleProduct = (id) => {
     return async (dispatch) => {
         dispatch(setProductStateToFetching());
         const response = await httpClient.get(

@@ -3,7 +3,7 @@ import * as posmachineActions from "../../actions/posmachine.action";
 import loading from '../../assets/image/loading.gif'
 import Table from '../Table';
 import { server } from "../../constants";
-import * as moment from 'moment'
+import moment from 'moment';
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -12,8 +12,6 @@ export default (props) => {
         ({ posmachineReducer }) => posmachineReducer
     );
     const dispatch = useDispatch();
-    // const [data, setData] = React.useState(() => makeData(20))
-    // const [originalData] = React.useState(data)
     const [skipPageReset, setSkipPageReset] = React.useState(false)
     const updateMyData = (rowIndex, columnId, value) => {
         // We also turn on the flag to not reset the page

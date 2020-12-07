@@ -1,7 +1,8 @@
 var mongoose = require( 'mongoose' ); 
 
-mongoose.connect('mongodb+srv://admin99:Gamarjoba1@cluster0.etqzi.mongodb.net/<dbname>?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}) 
-//mongodb+srv://admin99:<password>@cluster0.etqzi.mongodb.net/<dbname>?retryWrites=true&w=majority
+//mongoose.connect('mongodb+srv://admin99:Gamarjoba1@cluster0.etqzi.mongodb.net/<dbname>?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}) 
+mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true});
+
 mongoose.set('debug', true);
 mongoose.set("debug", (collectionName, method, query, doc) => {
   console.log(`${collectionName}.${method}`, JSON.stringify(query), doc);

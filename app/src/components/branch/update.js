@@ -16,11 +16,8 @@ export default (props) => {
             return props.history.push("/login");
         }
         const { id } = props.match.params;
-        // dispatch(branchActions.getDropdownPOS())
         dispatch(branchActions.getSingleBranch(id))
         dispatch(branchActions.clearState());
-        // dispatch(branchActions.getSingleBranch(id))
-
     }, []);
     useEffect(() => {
         if (branchReducer.result) {

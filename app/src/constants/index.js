@@ -37,7 +37,6 @@ export const SUPPLIER_CLEAR = "SUPPLIER_CLEAR";
 export const SHOP_FETCHING = "SHOP_FETCHING";
 export const SHOP_SUCCESS = "SHOP_SUCCESS";
 export const SHOP_FAILED = "SHOP_FAILED";
-
 export const SHOP_UPDATE_ORDER = "SHOP_UPDATE_ORDER";
 export const SHOP_UPDATE_PAYMENT = "SHOP_UPDATE_PAYMENT";
 // Stock Page

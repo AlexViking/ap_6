@@ -84,13 +84,13 @@ export default (props) => {
         <div className="container-fluid">
           <div className="row mb-2">
             <div className="col-sm-6">
-              <h1 className="m-0 text-dark">Dashboard for items</h1>
+              <h1 className="m-0 text-dark">Dashboard</h1>
             </div>
             {/* /.col */}
             <div className="col-sm-6">
               <ol className="breadcrumb float-sm-right">
                 <li className="breadcrumb-item">
-                  <a href="/">Home</a>
+                  <a href="#">Home</a>
                 </li>
                 <li className="breadcrumb-item active">Dashboard v1</li>
               </ol>
@@ -108,13 +108,13 @@ export default (props) => {
           {/* Main row */}
           <div className="row">
             {/* Left col */}
-            <section className="col-lg-3 connectedSortable">
+            <section className="col-lg-7 connectedSortable">
               {/* Custom tabs (Charts with tabs)*/}
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">
                     <i className="fas fa-chart-pie mr-1" />
-                     Inventory Stock Status #1
+                     Inventory Stock Status
                   </h3>
                 </div>
                 {/* /.card-header */}
@@ -162,13 +162,13 @@ export default (props) => {
             </section>
             {/* /.Left col */}
                 {/* Left col */}
-            <section className="col-lg-3 connectedSortable">
+            <section className="col-lg-5 connectedSortable">
               {/* Custom tabs (Charts with tabs)*/}
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">
                     <i className="fas fa-chart-pie mr-1" />
-                    Inventory Stock Status #2
+                    Inventory Stock Status
                   </h3>
                   <div className="card-tools">
                     </div>
@@ -211,14 +211,14 @@ export default (props) => {
             {/* /.Left col */}
           </div>
           <div className="row">
-            {/* Left col */}
-            <section className="col-lg-3 connectedSortable">
+  {/* Left col */}
+  <section className="col-lg-7 connectedSortable">
               {/* Custom tabs (Charts with tabs)*/}
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title">
                     <i className="fas fa-chart-pie mr-1" />
-                     Inventory Stock Status #3
+                     Inventory Stock Status
                   </h3>
                   <div className="card-tools">
                   

@@ -33,7 +33,7 @@ export const Index = () => {
             process.env.REACT_APP_API_URL + "branch"
         );
         if (response.data.result == "success") {
-            // console.log(response.data);
+            console.log(response.data);
             dispatch(setBranchStateToSuccess(response.data.data));
         } else if (response.data.result === "error") {
             dispatch(setBranchStateToFailed());

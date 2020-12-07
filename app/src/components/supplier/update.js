@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as supplierActions from "../../actions/supplier.action";
 import * as Yup from "yup";
 import { server } from "../../constants";
+//
 const Create_Schema = Yup.object().shape({
     name: Yup.string()
         .min(2, "name is Too Short!")
@@ -197,7 +198,7 @@ export default (props) => {
                     <div className="row mb-2">
                         <div className="col-sm-6">
 
-                            <h1 className="m-0 text-dark">Create Supplier</h1>
+                            <h1 className="m-0 text-dark">Update Supplier</h1>
                         </div>
                     </div>
                     {/* /.row */}

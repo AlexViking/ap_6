@@ -1,58 +1,55 @@
 import React, { useState, useEffect } from "react";
 import { Formik } from "formik";
 import { useSelector, useDispatch } from "react-redux";
-import * as branchActions from "../../actions/branch.action";
+import * as productActions from "../../actions/product.action";
 import { server } from "../../constants";
 import Select from 'react-select'
 export default (props) => {
     const dispatch = useDispatch();
     const [multiselect, setMultiselect] = useState([])
-    const branchReducer = useSelector(
-        ({ branchReducer }) => branchReducer
+    const productReducer = useSelector(
+        ({ productReducer }) => productReducer
     );
-
     useEffect(() => {
         if (localStorage.getItem(server.TOKEN_KEY) === null) {
             return props.history.push("/login");
         }
         const { id } = props.match.params;
-        // dispatch(branchActions.getDropdownPOS())
-        dispatch(branchActions.getSingleBranch(id))
-        dispatch(branchActions.clearState());
-        // dispatch(branchActions.getSingleBranch(id))
+        dispatch(productActions.getSingleProduct(id))
+        // dispatch(productActions.clearState());
 
     }, []);
     useEffect(() => {
-        if (branchReducer.result) {
-            let initial_image = { file_obj: '', frontimage: branchReducer.result.frontimage }
+        if (productReducer.result) {
+            let initial_image = { file_obj: '', image: productReducer.result.image }
             showPreviewImage(initial_image)
 
         }
-    }, [branchReducer])
+    }, [productReducer])
     const showPreviewImage = (values) => {
         return (
             <img
-                id="frontimage"
+                id="image"
                 src={
                     values.file_obj != null
                         ? values.file_obj
-                        : process.env.REACT_APP_BRANCH_FRONT_IMAGE_PATH + '/' + values.frontimage
+                        : process.env.REACT_APP_PRODUCT_IMAGE_PATH + '/' + values.image
                 }
                 className="img-fluid"
-                width={300}
+                width={200}
             />
         );
     };
     const renderSelectwithSelected = () => {
         {
-            console.log(branchReducer.result)
-            if (branchReducer.result) {
+            console.log(productReducer.result)
+            if (productReducer.result) {
                 return (
                     <div className="form-group ">
                         <Select
                             name="pos_machines"
-                            defaultValue={branchReducer.result
-                                ? branchReducer.result.pos_machines.map(val => {
+                            defaultValue={productReducer.result
+                                ? productReducer.result.pos_machines.map(val => {
                                     return {
                                         'value': val._id,
                                         'label': val.alias
@@ -62,8 +59,8 @@ export default (props) => {
 
                             isMulti
                             closeMenuOnSelect={false}
-                            options={branchReducer.options
-                                ? branchReducer.options : null}
+                            options={productReducer.options
+                                ? productReducer.options : null}
                         />
                     </div>
 
@@ -98,19 +95,19 @@ export default (props) => {
                             onChange={handleChange}
                             value={values.name}
                             className="form-control"
-                            placeholder="Branch Name"
+                            placeholder="Product Name"
                             className={
-                                errors.alias && touched.alias
+                                errors.name && touched.name
                                     ? "form-control is-invalid"
                                     : "form-control"
                             }
                         />
-                        <div className="input-group-append">
+                        {/* <div className="input-group-append">
                             <div className="input-group-text">
                                 <span className="fas fa-building"></span>
                             </div>
-                        </div>
-                        {errors.alias && touched.alias ? (
+                        </div> */}
+                        {errors.name && touched.name ? (
                             <small id="passwordHelp" className="text-danger">
                                 {errors.name}
                             </small>
@@ -118,50 +115,51 @@ export default (props) => {
                     </div>
                     <div className="form-group input-group has-feedback">
                         <textarea
-                            name="address"
+                            type="text"
+                            name="price"
                             onChange={handleChange}
-                            value={values.address}
+                            value={values.price}
                             className="form-control"
-                            placeholder="Address"
+                            placeholder="Price"
                             className={
-                                errors.address && touched.address
+                                errors.price && touched.price
                                     ? "form-control is-invalid"
                                     : "form-control"
                             }
                         ></textarea>
-                        <div className="input-group-append">
+                        {/* <div className="input-group-append">
                             <div className="input-group-text">
                                 <span className="fas fa-building"></span>
                             </div>
-                        </div>
-                        {errors.serial_number && touched.serial_number ? (
+                        </div> */}
+                        {errors.price && touched.price ? (
                             <small id="passwordHelp" className="text-danger">
-                                {errors.address}
+                                {errors.price}
                             </small>
                         ) : null}
                     </div>
                     <div className="form-group input-group has-feedback">
                         <input
                             type="text"
-                            name="tel"
+                            name="stock"
                             onChange={handleChange}
-                            value={values.tel}
+                            value={values.stock}
                             className="form-control"
-                            placeholder="Branch Telephone"
+                            placeholder="stock"
                             className={
-                                errors.tel && touched.tel
+                                errors.stock && touched.stock
                                     ? "form-control is-invalid"
                                     : "form-control"
                             }
                         />
-                        <div className="input-group-append col-3">
+                        {/* <div className="input-group-append col-3">
                             <div className="input-group-text">
                                 <span className="fas fa-phone"></span>
                             </div>
-                        </div>
-                        {errors.tel && touched.tel ? (
+                        </div> */}
+                        {errors.stock && touched.stock ? (
                             <small id="passwordHelp" className="text-danger">
-                                {errors.tel}
+                                {errors.stock}
                             </small>
                         ) : null}
                     </div>
@@ -177,19 +175,19 @@ export default (props) => {
                                 <input type="file"
                                     onChange={e => {
                                         e.preventDefault();
-                                        setFieldValue("frontimage", e.target.files[0]); // for upload
+                                        setFieldValue("image", e.target.files[0]); // for upload
                                         setFieldValue(
                                             "file_obj",
                                             URL.createObjectURL(e.target.files[0])
                                         ); // for preview image
-                                    }} name="frontimage"
+                                    }} name="image"
                                     className={
-                                        errors.frontimage && touched.frontimage
+                                        errors.image && touched.image
                                             ? "form-control is-invalid"
                                             : "form-control"
                                     }
                                     accept="image/*" id="exampleInputFile" />
-                                <label className="custom-file-label" for="exampleInputFile">Choose Front Image</label>
+                                <label className="custom-file-label" for="exampleInputFile">Choose Image</label>
                             </div>
 
                         </div>
@@ -218,7 +216,7 @@ export default (props) => {
                     <div className="row mb-2">
                         <div className="col-sm-6">
 
-                            <h1 className="m-0 text-dark">Create Branch Data</h1>
+                            <h1 className="m-0 text-dark">Update Product Data</h1>
                         </div>
                     </div>
                     {/* /.row */}
@@ -235,23 +233,22 @@ export default (props) => {
                     <Formik
                         enableReinitialize={true}
                         initialValues={
-                            branchReducer.result
-                                ? branchReducer.result
-                                : { name: "", tel: "", address: "" }
+                            productReducer.result
+                                ? productReducer.result
+                                : { name: "", address: "" }
                         }
                         onSubmit={(values, { setSubmitting }) => {
                             let formData = new FormData();
-                            formData.append("id", branchReducer.result._id);
+                            formData.append("id", productReducer.result._id);
                             formData.append("name", values.name);
-                            formData.append("tel", values.tel);
-                            formData.append("address", values.address);
+                            formData.append("stock", values.stock);
+                            formData.append("price", values.price);
                             let result = multiselect.map(arr => arr.value)
-
                             formData.append("pos_machines", result)
-                            if (values.frontimage) {
-                                formData.append("frontimage", values.frontimage);
+                            if (values.image) {
+                                formData.append("image", values.image);
                             }
-                            dispatch(branchActions.Update(formData, props.history));
+                            dispatch(productActions.Update(formData, props.history));
                             setSubmitting(false);
                         }}
                     // validationSchema={Create_Schema}

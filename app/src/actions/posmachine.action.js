@@ -33,7 +33,7 @@ export const index = () => {
       process.env.REACT_APP_API_URL + "pos_machine"
     );
     if (response.data.result == "success") {
-      // console.log(response.data);
+      console.log(response.data);
       dispatch(setPOSMachineStateToSuccess(response.data.data));
     } else if (response.data.result === "error") {
       dispatch(setPOSMachineStateToFailed());
